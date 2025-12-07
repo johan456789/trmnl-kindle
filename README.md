@@ -1,3 +1,7 @@
+It seems that curl has problems accessing https urls, at least on my kindle voyage. someone reported it [here](https://github.com/usetrmnl/trmnl-kindle/issues/11#issuecomment-2917361929)
+
+---
+
 # Turn Your Amazon Kindle into a TRMNL
 
 This guide explains how to jailbreak your Kindle using WinterBreak, then convert it into a personal dashboard with TRMNL.
