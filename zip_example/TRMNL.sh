@@ -16,7 +16,8 @@ source ./utils.sh
 #
 # ----------------------------- USER SETTINGS -------------------------------- #
 API_KEY=$(cat apikey.txt)
-BASE_URL="https://trmnl.app"
+BASE_URL="http://YOUR_URL:PORT"
+KINDLE_MAC_ADDRESS="YOUR_KINDLE_MAC_ADDRESS"
 RSSI="0"
 USER_AGENT="trmnl-display/0.1.1"
 DEBUG_MODE=false  # Set to true to enable debug messages, false to disable
@@ -76,6 +77,7 @@ while true; do
   BATTERY_VOLTAGE=$(get_kindle_battery)
   RESPONSE="$(
     curl -s \
+      -H "id: $KINDLE_MAC_ADDRESS" \
       -H "access-token: $API_KEY" \
       -H "battery-voltage: $BATTERY_VOLTAGE" \
       -H "png-width: $PNG_WIDTH" \
